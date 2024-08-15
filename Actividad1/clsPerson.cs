@@ -77,14 +77,14 @@ namespace Actividad1
         #region Utilities
         public void opShowPerson()
         {
-            Console.WriteLine("Datos  de la persona");
+            Console.WriteLine("\nDatos  de la persona");
             Console.WriteLine("Cedula:" + opGetId());
             Console.WriteLine("Nombre:" + opGetName());
             Console.WriteLine("Fecha de nacimiento:" + opGetBirthdate());
             Console.WriteLine("Celular:" + opGetPhone());
             Console.WriteLine("Correo:" + opGetMail());
             Console.WriteLine("Salario:" + opGetSalary());
-            Console.WriteLine("Facultad:" + opGetFaculty(),"\n");
+            Console.WriteLine("Facultad:" + opGetFaculty());
         }
         #endregion
         #endregion

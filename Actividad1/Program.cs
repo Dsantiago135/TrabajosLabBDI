@@ -11,6 +11,7 @@ namespace Actividad1
             varListPeople[15].opShowPerson();
             varListPeople.Sort((a, b) => a.opGetId().CompareTo(b.opGetId()));
             varListPeople[15].opShowPerson();
+            clsSeparateFunctions.opBinarySearchById(varListPeople,246236);
         }
     }
 }

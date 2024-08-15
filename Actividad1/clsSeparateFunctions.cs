@@ -54,6 +54,7 @@ namespace Actividad1
 
                 if (midPerson.opGetId() == prmId)
                 {
+                    Console.WriteLine("\nPersona encontrada");
                     return midPerson;
                 }
                 else if (midPerson.opGetId() < prmId)
@@ -66,6 +67,7 @@ namespace Actividad1
                 }
             }
             // Si no se encuentra, devolver null o un valor por defecto
+            Console.WriteLine("\nPersona no encontrada");
             return null;
         }
     }
