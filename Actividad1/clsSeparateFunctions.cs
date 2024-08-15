@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Actividad1
 {
-    internal class clsReader
+    internal class clsSeparateFunctions
     {
         public static List<clsPerson> opReadPerson(string prmfilepath)
         {
@@ -18,16 +18,16 @@ namespace Actividad1
 
                     while ((varLine = varReader.ReadLine()) != null)
                     {
-                        string[] vecValues = varLine.Split(',');
-                        clsPerson varPerson = new clsPerson();
-                        varPerson.opSetId(float.Parse(vecValues[0]));
-                        varPerson.opSetName(vecValues[1]);
-                        varPerson.opSetBirthdate(vecValues[2]);
-                        varPerson.opSetPhone(vecValues[3]);
-                        varPerson.opSetMail(vecValues[4]);
-                        varPerson.opSetSalary(vecValues[5]);
-                        varPerson.opSetFaculty(vecValues[6]);
-                        ListPeople.Add(varPerson);
+                    string[] vecValues = varLine.Split(',');
+                    clsPerson varPerson = new clsPerson();
+                    varPerson.opSetId(long.Parse(vecValues[0]));
+                    varPerson.opSetName(vecValues[1]);
+                    varPerson.opSetBirthdate(vecValues[2]);
+                    varPerson.opSetPhone(vecValues[3]);
+                    varPerson.opSetMail(vecValues[4]);
+                    varPerson.opSetSalary(vecValues[5]);
+                    varPerson.opSetFaculty(vecValues[6]);
+                    ListPeople.Add(varPerson);
                     }
                 }
             }

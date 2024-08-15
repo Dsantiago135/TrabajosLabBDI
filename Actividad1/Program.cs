@@ -7,8 +7,8 @@ namespace Actividad1
         static void Main(string[] args)
         {
             var varListPeople = new List<clsPerson>();
-            varListPeople = clsReader.opReadPerson("C: \\Users\\mestr\\Downloads\\facultades\\facultades\\personas.txt");
-            varListPeople[2].opShowPerson();
+            varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\Downloads\\facultades\\facultades\\personas.txt");
+            varListPeople[15].opShowPerson();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Actividad1
     internal class clsPerson
     {
         #region Attributes
-        float attId;
+        long attId;
         string attName;
         string attBirthdate;
         string attPhone;
@@ -15,7 +15,7 @@ namespace Actividad1
         #endregion
         #region Operations
         #region Setters
-        public void opSetId(float prmId)
+        public void opSetId(long prmId)
         {
             this.attId = prmId;
         }
@@ -45,7 +45,7 @@ namespace Actividad1
         }
         #endregion
         #region Getters
-        public float opGetId()
+        public long opGetId()
         {
             return attId;
         }
