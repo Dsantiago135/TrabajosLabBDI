@@ -18,10 +18,18 @@ namespace uTestactividad1
         public void testBinarySearhSortedList()
         {
             #region Setup
-            varListPeople.Sort();
+            clsPerson varPerson = new clsPerson();
+            varListPeople.Sort((a, b) => a.opGetId().CompareTo(b.opGetId()));
+            varPerson = clsSeparateFunctions.opBinarySearchById(varListPeople, 1306354264);
             #endregion
             #region test & assert
-
+            Assert.AreEqual(1306354264, varPerson.opGetId());
+            Assert.AreEqual(" Ignacio Palacios", varPerson.opGetName());
+            Assert.AreEqual(" 12/07/1980", varPerson.opGetBirthdate());
+            Assert.AreEqual(" 34963777", varPerson.opGetPhone());
+            Assert.AreEqual(" ignacio.palacios@gmail.com", varPerson.opGetMail());
+            Assert.AreEqual(" 4300000", varPerson.opGetSalary());
+            Assert.AreEqual(" 8", varPerson.opGetFaculty());
             #endregion
         }
         [TestMethod]
