@@ -42,5 +42,31 @@ namespace Actividad1
             }
             return ListPeople;
         }
+        public static clsPerson opBinarySearchById(List<clsPerson> prmList, long prmId)
+        {
+            int varLeft = 0;
+            int varRight = prmList.Count - 1;
+
+            while (varLeft <= varRight)
+            {
+                int mid = varLeft + (varRight - varLeft) / 2;
+                clsPerson midPerson = prmList[mid];
+
+                if (midPerson.opGetId() == prmId)
+                {
+                    return midPerson;
+                }
+                else if (midPerson.opGetId() < prmId)
+                {
+                    varLeft = mid + 1;
+                }
+                else
+                {
+                    varRight = mid - 1;
+                }
+            }
+            // Si no se encuentra, devolver null o un valor por defecto
+            return null;
+        }
     }
 }

@@ -9,6 +9,8 @@ namespace Actividad1
             var varListPeople = new List<clsPerson>();
             varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\Downloads\\facultades\\facultades\\personas.txt");
             varListPeople[15].opShowPerson();
+            varListPeople.Sort((a, b) => a.opGetId().CompareTo(b.opGetId()));
+            varListPeople[15].opShowPerson();
         }
     }
 }

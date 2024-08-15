@@ -84,7 +84,7 @@ namespace Actividad1
             Console.WriteLine("Celular:" + opGetPhone());
             Console.WriteLine("Correo:" + opGetMail());
             Console.WriteLine("Salario:" + opGetSalary());
-            Console.WriteLine("Facultad:" + opGetFaculty());
+            Console.WriteLine("Facultad:" + opGetFaculty(),"\n");
         }
         #endregion
         #endregion
