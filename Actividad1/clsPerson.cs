@@ -2,7 +2,7 @@
 
 namespace Actividad1
 {
-    internal class clsPerson
+    public class clsPerson
     {
         #region Attributes
         long attId;

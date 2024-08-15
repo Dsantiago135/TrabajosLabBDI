@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Actividad1
 {
-    internal class clsSeparateFunctions
+    public class clsSeparateFunctions
     {
         public static List<clsPerson> opReadPerson(string prmfilepath)
         {
