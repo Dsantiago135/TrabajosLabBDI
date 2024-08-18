@@ -70,5 +70,20 @@ namespace Actividad1
             Console.WriteLine("\nPersona no encontrada");
             return null;
         }
+        public static clsPerson opSequentialShearchById(List<clsPerson> prmList, long prmId)
+        {
+            for (int i = 0; i < prmList.Count; i++)
+            {
+                if (prmList[i].opGetId() == prmId)
+                {
+                    clsPerson personFound = prmList[i];
+                    Console.WriteLine("\nPersona encontrada");
+                    return personFound;
+                }
+            }
+            Console.WriteLine("\nPersona no encontrada");
+            return null;
+
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Actividad1
 {
@@ -7,11 +9,26 @@ namespace Actividad1
         static void Main(string[] args)
         {
             var varListPeople = new List<clsPerson>();
-            varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\Downloads\\facultades\\facultades\\personas.txt");
-            varListPeople[15].opShowPerson();
+            varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\Downloads\\facultades\\personas.txt");
+            Console.WriteLine("\nBusqueda arreglo sin ordenar ");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            clsSeparateFunctions.opSequentialShearchById(varListPeople, 2708826453);
+            stopwatch.Stop();
+            TimeSpan elapsedTime1 = stopwatch.Elapsed;
+            Console.WriteLine($"El tiempo de ejecución fue: {elapsedTime1.TotalMilliseconds} milisegundos.");
+
             varListPeople.Sort((a, b) => a.opGetId().CompareTo(b.opGetId()));
-            varListPeople[15].opShowPerson();
-            clsSeparateFunctions.opBinarySearchById(varListPeople,246236);
+
+            Console.WriteLine("\nBusqueda arreglo ordenado ");
+            stopwatch.Reset();
+            stopwatch.Start();
+            clsSeparateFunctions.opBinarySearchById(varListPeople, 9999927604);
+            stopwatch.Stop();
+            TimeSpan elapsedTime2 = stopwatch.Elapsed;
+            Console.WriteLine($"El tiempo de ejecución fue: {elapsedTime2.TotalMilliseconds} milisegundos.");
+
+            Console.ReadLine();
         }
     }
 }
