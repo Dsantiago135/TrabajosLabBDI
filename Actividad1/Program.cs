@@ -9,7 +9,7 @@ namespace Actividad1
         static void Main(string[] args)
         {
             var varListPeople = new List<clsPerson>();
-            varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\Downloads\\facultades\\personas.txt");
+            varListPeople = clsSeparateFunctions.opReadPerson("C:\\Users\\mestr\\OneDrive\\Documents\\Santi\\Repositorios\\TrabajosLabBDI\\Actividad1\\facultades\\personas.txt");
             Console.WriteLine("\nBusqueda arreglo sin ordenar ");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();

@@ -1,0 +1,9 @@
+codigo, nombre
+1, FIET
+2, FACNED
+3, Contables
+4, Medicina
+5, Agrarias
+6, Derecho
+7, Humanidades
+8, Artes
